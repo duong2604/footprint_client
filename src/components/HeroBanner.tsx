@@ -55,10 +55,13 @@ export function HeroBanner() {
     >
       <CarouselContent>
         {components.map((item, index) => (
-          <CarouselItem key={index} className="p-0 relative">
+          <CarouselItem
+            key={index}
+            className="relative max-h-[35vh] md:max-h-[75vh]"
+          >
             <AspectRatio
               ratio={1 / 1}
-              className="bg-muted overflow-hidden w-full h-72 md:h-[75vh]"
+              className="bg-muted overflow-hidden p-0 w-full h-72 md:h-[75vh]"
             >
               <Image
                 src={item.link}
@@ -67,7 +70,7 @@ export function HeroBanner() {
                 className="object-cover"
               />
             </AspectRatio>
-            <div className="absolute inset-0 p-5 bg-white/35 md:bg-transparent md:px-0 md:top-50 md:left-50 md:max-w-[50%] flex flex-col items-center md:items-start">
+            <div className="absolute inset-0 p-5 bg-white/35 max-h-[35vh] md:bg-transparent md:px-0 md:top-50 md:left-50 md:max-w-[50%] flex flex-col items-center md:items-start">
               <h3
                 className={cn(
                   "text-sm font-medium md:text-2xl text-[#] tracking-wider leading-6",
