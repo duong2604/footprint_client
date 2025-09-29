@@ -37,7 +37,7 @@ export function CategorySlides({ categories }: CategorySlidesProps) {
         {categories.map((item, index) => (
           <CarouselItem
             key={index}
-            className="pl-1 md:basis-1/5 relative flex flex-col items-center"
+            className="pl-1 basis-full md:basis-1/3 lg:basis-1/3 xl:basis-1/5 relative flex flex-col items-center"
           >
             <Link href={"#"}>
               <Image
