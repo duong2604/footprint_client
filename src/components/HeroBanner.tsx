@@ -57,23 +57,19 @@ export function HeroBanner() {
         {components.map((item, index) => (
           <CarouselItem
             key={index}
-            className="relative max-h-[35vh] md:max-h-[75vh]"
+            className={cn("p-0 w-full min-h-72 md:h-[40vh] xl:h-[80vh]")}
+            style={{
+              backgroundImage: `url(${item.link})`,
+              backgroundPosition: "bottom",
+              backgroundSize: "cover",
+              backgroundRepeat: "no-repeat",
+              objectFit: "cover",
+            }}
           >
-            <AspectRatio
-              ratio={1 / 1}
-              className="bg-muted overflow-hidden p-0 w-full h-72 md:h-[75vh]"
-            >
-              <Image
-                src={item.link}
-                alt={item.subHeading}
-                fill
-                className="object-cover"
-              />
-            </AspectRatio>
-            <div className="absolute inset-0 p-5 bg-white/35 max-h-[35vh] md:bg-transparent md:px-0 md:top-50 md:left-50 md:max-w-[50%] flex flex-col items-center md:items-start">
+            <div className="p-8 flex flex-col items-center bg-gray-300/35 md:bg-transparent md:p-12 md:h-full md:justify-end md:w-[80%] md:items-start lg:max-w-[50%] lg:h-[80%]">
               <h3
                 className={cn(
-                  "text-sm font-medium md:text-2xl text-[#] tracking-wider leading-6",
+                  "text-sm font-medium md:text-2xl tracking-wider leading-6",
                   outfit.variable
                 )}
               >
@@ -90,7 +86,7 @@ export function HeroBanner() {
               </h1>
               <p
                 className={cn(
-                  "capitalize text-shadow-xs text-sm text-center my-5 md:text-left md:text-[16px] md:max-w-2/3 font-light md:font-medium leading-6",
+                  "capitalize text-shadow-xs text-sm text-center my-5 md:text-left md:text-[16px] font-light md:font-medium leading-6",
                   audiowide.variable
                 )}
               >
