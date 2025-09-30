@@ -1,7 +1,7 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import { ThemeProvider } from "@/components/ui/theme-provider";
-import { audiowide, outfit } from "@/lib/fonts";
+import { audiowide } from "@/lib/fonts";
 import type { Metadata } from "next";
 import "./globals.css";
 
@@ -20,7 +20,7 @@ export default function RootLayout({
       <html lang="en" suppressHydrationWarning>
         <body
           suppressHydrationWarning
-          className={`${audiowide.variable} ${outfit.variable} antialiased`}
+          className={`${audiowide.className} antialiased`}
         >
           <ThemeProvider
             attribute={"class"}
