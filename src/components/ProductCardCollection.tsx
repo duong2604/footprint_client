@@ -1,5 +1,7 @@
 "use client";
 
+import { outfit } from "@/lib/fonts";
+import { cn } from "@/lib/utils";
 import { Heart, ShoppingCart } from "lucide-react";
 import Link from "next/link";
 import { Button } from "./ui/button";
@@ -32,7 +34,12 @@ export default function ProductCardCollection({
   const handleAddToCart = () => {};
 
   return (
-    <Card className="w-full max-w-sm shadow-none p-0 gap-0 hover:cursor-pointer">
+    <Card
+      className={cn(
+        outfit.className,
+        "w-full max-w-sm shadow-none p-0 gap-0 hover:cursor-pointer"
+      )}
+    >
       <CardContent className="overflow-hidden relative aspect-square p-0 hover:text-amber-500 group">
         <Link href={"#"}>
           <img

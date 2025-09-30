@@ -101,7 +101,7 @@ export default function CollectionTabs() {
           <TabsContent
             key={index}
             value={tabs[index]}
-            className="w-full h-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 place-content-center gap-6"
+            className="w-full h-full md:pt-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 place-items-center gap-6"
           >
             {products.map((p, index) => (
               <React.Fragment key={index}>
