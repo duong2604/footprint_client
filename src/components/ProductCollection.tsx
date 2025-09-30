@@ -11,7 +11,7 @@ const component = {
 
 export default function ProductCollection() {
   return (
-    <div className="pt-8 sm:pt-12 md:pt-32 px-5">
+    <div className="pt-8 sm:pt-12 md:pt-32 px-5 pb-12 md:pb-16 lg:pb-20">
       <h2 className="capitalize text-xl text-center md:text-[35px] md:leading-[45px] font-medium">
         {component.title}
       </h2>
